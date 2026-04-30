@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+        *{
+             font-family: 'Poppins', sans-serif;
+             overflow-x: hidden;      
+        }
+        body{
+            background: hsl(0, 0%, 3%);
+            color: #999;
+        }
+        a{
+           text-decoration: none;
+           color:  #999;
+        }
+        *{
+            font-family: "Poppins";
+            margin: 0%;
+            padding: 0;
+        }
+        html{
+    font-size: 62.5%;
+}
+.logo{
+    font-size: 3.5rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    width: fit-content;
+ text-shadow: 0 0 4px  #b74b4b;
+ border-radius: 30px;
+}
+nav a{
+    font-size: 1.8rem;
+    color: #999;
+    font-weight: 500;
+      transition: 0.3s ease;
+}
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+span{
+    color: #b74b4b;
+}
+.btn{
+   background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #b74b4b;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    width: 150px;height: 45px;
+    text-align: center;
+    position: relative;
+    top: 10px;
+      display: flex;
+align-items: center;
+justify-content: center;
+transition: 0.3s ease-in-out;
+}
+.btn:hover{
+     transform: scale3d(1.2) translateY(1px);
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 25px #b74b4b;
+}
+main h3{
+    font-size: 3.8rem;
+    font-weight: 700;
+}
+main h1{
+     font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    width: 1000px;
+}
+main p{
+     font-size: 1.5rem;
+}
+main img{
+    position: relative;
+    width: 62%;
+    height: 90%;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    left: 150px;
+    top: 10px;
+    border: 3px solid #b74b4b;
+}
+.icons a{  
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    color: #b74b4b;
+    font-size: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+align-items: center;
+justify-content: center;
+transition: 0.3s ease;
+}
+.icons a:hover{
+      color: black;
+    transform: scale(1.2) ;
+    background-color: #b74b4b;
+    box-shadow: 0  0 100px #b74b4b;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: #b74b4b solid 2px transparent;
+    box-shadow: 0  0 25px #b74b4b;
+    background-color: black transparent;
+    height: 90px;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
+header div{
+   position: relative;
+   left: 120px;
+}
+header nav{
+    position: relative;
+   right: 110px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    position: relative;
+    right: 140px;
+    margin-right: 40px;
+  height: 40%;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40%;
+    height: 800px;
+    margin-top: 8%;
+    overflow-y: hidden;
+}
+.one{
+    width: 111%;
+    position: relative;
+    right: 180px;
+   top: 150px;
+   display: flex;
+   flex-direction: column;
+   gap: 2%;
+   padding-left: 0%;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    top: 8px;
+    width: 500px;
+    height: 100px;
+    align-items: center;
+   padding-left: 35px;
+   right: 30px;
+}
+#hi{
+    position: relative;
+    right: 300px;
+    width: 1600px;
+    transition: 0.5s ease;
+    top: 30px;
+}
+#hi:hover{
+     transform: scaleX(1.07),scaleY(1.07);
+     border: #b74b4b solid 2px transparent;
+     box-shadow: 0  0 25px #b74b4b;
+}
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.typing-text span{
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+.typing-text span::before{
+    content: "software Developer";
+    color: #b74b4b;
+    animation: words 5s infinite;
+}
+.typing-text span::after{
+    content: "";
+    animation: cursor 0.7s infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 3px solid white;
+    }
+}
+@keyframes words{
+    0%, 20%{
+        content: "Frontend Developer";
+    }
+    21%, 40%{
+        content: "Python Programmer";
+    }
+    41%, 60%{
+        content: "Web Designer";
+    }
+    61%, 80%{
+        content: "C++ Programmer";
+    }
+    81%, 100%{
+        content: "Ai Generalist";
+    }
+}
+hr{
+    width: 93%;
+    margin: auto;
+    fill: grey;
+    color: grey;
+}
+.about{
+    width: 100%;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: row;
+   gap: -50%;
+   overflow-y: hidden;
+}
+.about .a1{
+    width: 450px;
+    height: 450px;
+    position: relative;
+    border-radius: 50%;
+    background-image: url("mine.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+   box-shadow: 0 0 200px #b74b4b;
+   transition: 0.7s ease ;
+   left: 65%;
+   top: 150px;
+}
+.about .a1:hover{
+         transform: scale(1.04);
+         box-shadow: 0 0 200px grey;
+}
+.about .a1:active{
+         transform: scale(1.04);
+         box-shadow: 0 0 200px white;
+}
+.about .a2{
+    width: 50%;
+    position: relative;
+    right: 380px;
+    top: -10px;
+    height: 100%;
+    padding-top: 200px;
+    overflow-y: hidden;
+    height: 500px;
+}
+.a2 h1{
+    font-size: 6.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    width: 1000px;
+    position: relative;
+    left: 220px;
+    bottom: 35px;
+}
+.about p{
+     font-size: 1.8rem;
+}
+#bb{
+    position: relative;
+    margin: auto;
+    top: 45px;
+}
+.projects{
+    width: 100%;
+    padding: 120px 0;
+   overflow-y: hidden;
+   display: flex;
+   flex-direction: column;
+   gap: 2%;
+}
+.projects h1{
+      font-size: 6.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    position: relative;
+    left: 630px;
+    top: -70px;
+    height: 10%;
+}
+.p{
+    width: 24.8%;
+    height: 490px;
+    border: 3px solid #b74b4b;
+    border-radius: 20px;
+    box-shadow: 0 0 25px  #b74b4b;
+    transition: 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.p:hover{
+    box-shadow: 0 0 25px grey;
+    scale: 1.03;
+}
+.box{
+    width: 100%;
+    height:1300px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 3%;
+   justify-content: center;
+   padding-top: 30px;
+}
+.pp{
+    width: 85%;
+    height: 55%;
+    border-radius: 20px;
+    position: relative;
+    left: 27px;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: -30px;
+}
+.pp1{
+     background-image: url("ttt.png");
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position-y: -99px;
+}
+.pp2{
+      background-image: url("c.png");
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position-y: -48px;
+}
+.pp3{
+      background-image: url("t.png");
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position-y: 0px;
+}
+.pp4{
+       background-image: url("m.png");
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position-x: 0.5px;
+}
+.pp5{
+        background-image: url("w.png");
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.pp6{
+        background-image: url("z.png");
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position-y: px;
+}
+.project-line{
+    width: 20%;
+    height: 4px;
+    margin: auto;
+    position: relative;
+    top: -63px;
+    left: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    background:#999;
+    transition: 1s ease;
+}
+.project-line::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #b74b4b);
+    animation: moveLine 10s linear infinite;
+    animation-timing-function: 3s ease-out;
+    border-radius: 10px;
+}
+@keyframes moveLine{
+    0%{
+        left: -30%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+.pp h2{
+     font-size: 50px;
+     position: relative;
+     top: 30px;
+}
+.p{
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+.ppp{
+    overflow-y: hidden;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.5%;
+}
+.ppp h2{
+    position: relative;
+    top: 15px;
+    font-size: 22px;
+}
+.ppp p{
+    font-size: 11.2px;
+    overflow-y: hidden;
+    text-align: center;
+    position: relative;
+    top: 8px;
+}
+.ppp a{
+      position: relative;
+      top: 15px;
+}
+.con{
+    width: 100%;
+    padding: 120px 0;
+    text-align: center;
+    overflow-y: hidden;
+}
+.con form{
+    overflow-y: hidden;
+}
+.cc1 input{
+  background-color: black;
+  border: 2px solid #b74b4b;
+  width: 500px;
+  height: 55px;
+  border-radius: 15px;
+  padding-left: 26px;
+  cursor: pointer;
+  color: grey;
+}
+.cc2 input{
+    background-color: black;
+  border: 2px solid #b74b4b;
+   width: 500px;
+  height: 233px;
+  border-radius: 15px;
+   border-radius: 15px;
+  padding-left: 26px;
+  cursor: pointer;
+  color: grey;
+  text-align: start;
+}
+.c2 a{
+     margin: auto;
+}
+.cc2{
+overflow-y: hidden;
+height: 500px;
+overflow-y: hidden;
+}
+.con h1{
+    font-size: 6.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    position: relative;
+}
+.c2{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 80px;
+   left: 220px;
+   gap: 30px;
+   overflow: hidden;
+}
+.cc1{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.cc2 .btn{
+     width: 200px;
+     height: 53px;
+     position: relative;
+     top: 32px;
+     padding-top: 0px;
+}
+.c1{
+    position: relative;
+    top: 20x;
+}
+.end{
+    width: 99.6%;
+    padding: 44px 0;
+    background-color: rgb(18, 18, 18);
+    border: 2px solid #b74b4b;
+}
+.end .icons{
+  position: relative;
+  left: 39%;
+  top: -17px;
+}
+.end nav{
+    position: relative;
+    left:35%;
+    top: -12px;
+}
+.end p{
+     position: relative;
+    left:41%;
+    top: 20px;
+    font-size: 14px;
+}
+</style>
+</head>
+<body>
+    <header >
+        <div class="logo">PORTFOLIO</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Projects</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <img src="mine.png"  id="hi">
+        <div class="one">
+                <pre><h1>Hi,It's <span>Ashtithwa</span></h1></pre>
+            <h3 class="typing-text">I'm a <span ></span></h3>
+             <p style="position: relative;top: 6px;">Curious and motivated developer with a strong interest in programming and web development. Skilled in C, C++, and JavaScript, with experience building small projects and exploring new technologies. Enjoys solving problems, learning continuously, and turning ideas into practical solutions. Passionate about improving technical skills and creating meaningful digital experiences through code.</p>
+        <div class="icons">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+</svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+</svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+</svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg></a>
+        </div>
+       <a href="#Contact" class="btn">Contacts</a>
+        </div>
+    </main>
+   <hr>
+   <section class="about" id="about">
+      <div class="a1"></div>
+      <div class="a2">
+        <h1>About <span>Me</span></h1>
+      <p>I’m a curious developer who enjoys turning ideas into working code. My interest in programming started with learning core concepts in C and C++, and it has grown into exploring JavaScript and web development. I enjoy building small projects, experimenting with new technologies, and solving coding challenges that improve my logical thinking. For me, programming is not just about writing code—it’s about creating solutions and learning something new every day. I’m always looking for opportunities to grow, collaborate, and build meaningful digital experiences through technology.</p>
+      <a href="" class="btn" id="bb">Resume</a>
+      </div>
+   </section>
+    <hr>
+     <section class="projects" id="project">
+      <h1>Projects</h1>
+      <div class="project-line"></div>
+    <div class="box">
+          <div class="p p1">
+            <div class="pp pp1"></div>
+                <div class="ppp">
+              <h2>Tic-Tac-Toe</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore itaque similique perferendis facere illo ratione cumque? Eaque, deserunt nulla? Cumque reiciendis ratione sequi magni eaque.</p>
+                <a href="#" class="btn">Read more</a>
+                </div>
+         </div>
+      <div class="p p2">
+            <div class="pp pp2"></div>
+             <div class="ppp">
+              <h2>Calculator</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore itaque similique perferendis facere illo ratione cumque? Eaque, deserunt nulla? Cumque reiciendis ratione sequi magni eaque.</p>
+                <a href="#" class="btn">Read more</a>
+         </div>
+      </div>
+      <div class="p p3">
+            <div class="pp pp3"></div>
+             <div class="ppp">
+              <h2>Typing Master</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore itaque similique perferendis facere illo ratione cumque? Eaque, deserunt nulla? Cumque reiciendis ratione sequi magni eaque.</p>
+                <a href="#" class="btn">Read more</a>
+         </div>
+      </div>
+      <div class="p p4">
+           <div class="pp pp4"></div>
+            <div class="ppp">
+              <h2>Medium</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore itaque similique perferendis facere illo ratione cumque? Eaque, deserunt nulla? Cumque reiciendis ratione sequi magni eaque.</p>
+                <a href="#" class="btn">Read more</a>
+         </div>
+      </div>
+      <div class="p p5">
+           <div class="pp pp5"></div>
+         <div class="ppp">
+              <h2>Wikipedia</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore itaque similique perferendis facere illo ratione cumque? Eaque, deserunt nulla? Cumque reiciendis ratione sequi magni eaque.</p>
+                <a href="#" class="btn">Read more</a>
+         </div>
+      </div>
+      <div class="p p6">
+           <div class="pp pp6"></div>
+            <div class="ppp">
+              <h2>Zomato</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore itaque similique perferendis facere illo ratione cumque? Eaque, deserunt nulla? Cumque reiciendis ratione sequi magni eaque.</p>
+                <a href="#" class="btn">Read more</a>
+         </div>
+      </div>
+    </div>
+   </section>
+   <hr>
+  <section class="con" id="Contact">
+    <div class="c1">
+        <h1>Contact <span>Me</span></h1>
+    </div>
+<form id="contactForm">
+    <div class="c2">
+        <div class="cc1">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Phone Number">
+            <input type="text" placeholder="Subject">
+        </div>
+        <div class="cc2">
+            <input type="text" placeholder="Your Message" required>
+            <button type="submit" class="btn">Send message</button>
+        </div>
+    </div>
+</form>
+</section>
+   <footer class="end">
+          <div class="icons">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+</svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+</svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+</svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg></a>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="about">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+        <p>©Ashtithwa Pradhan | All Rights Reserved</p>
+   </footer>
+</body>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault(); 
+    alert("Message submitted successfully!");
+    document.getElementById("contactForm").reset(); 
+}); 
+</script>
+</html>
